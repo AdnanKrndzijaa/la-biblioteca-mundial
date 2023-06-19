@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Biblioteca Mundial</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="quote_string">“All our dreams can come true, if we have the courage to pursue them.”
+        <b>\n\n- Walt Disney</b>
+    </string>
+
+    <string name="quote_string2">“The secret of getting ahead is getting started.”
+        <b>\n\n- Mark Twain</b>
+    </string>
+
+    <string name="quote_string3">“I’ve missed more than 9,000 shots in my career. I’ve lost almost 300 games. 26 times I’ve been trusted to take the game winning shot and missed. I’ve failed over and over and over again in my life, and that is why I succeed.”
+        <b>\n\n- Michael Jordan</b>
+    </string>
+
+    <string name="quote_string4">“It’s hard to beat a person who never gives up.”
+        <b>\n\n- Babe Ruth</b>
+    </string>
+
+    <string name="quote_string5">“Write it. Shoot it. Publish it. Crochet it. Sauté it. Whatever. MAKE.”
+        <b>\n\n- Joss Whedon</b>
+    </string>
+
+    <string name="quote_string6">“Do what you feel in your heart to be right―for you’ll be criticized anyway.”
+        <b>\n\n- Eleanor Roosevelt</b>
+    </string>
+
+    <string name="quote_string7">“Every Friday, I like to high five myself for getting through another week on little more than caffeine, willpower, and inappropriate humor.”
+        <b>\n\n- Nanea Hoffman</b>
+    </string>
+
+    <string name="quote_string8">“Every successful person in the world is a hustler one way or another. We all hustle to get where we need to be. Only a fool would sit around and wait on another man to feed him.”
+        <b>\n\n- K’wan</b>
+    </string>
+
+    <string name="quote_string9">“I always did something I was a little not ready to do. I think that’s how you grow. When there’s that moment of ‘Wow, I’m not really sure I can do this,’ and you push through those moments, that’s when you have a breakthrough.”
+        <b>\n\n- Marissa Mayer</b>
+    </string>
+
+    <string name="quote_string10">“If you hire people just because they can do a job, they’ll work for your money. But if you hire people who believe what you believe, they’ll work for you with blood and sweat and tears.”
+        <b>\n\n- Simon Sinek</b>
+    </string>
+
+
+</resources>

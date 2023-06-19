@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D9D9D9"
+    tools:context=".adminpannel.AdminDashboard">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="0dp"
+        android:layout_height="90dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/loginView"
+        android:background="@drawable/login_shape">
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toTopOf="@+id/loginView"
+        app:layout_constraintBottom_toBottomOf="@id/loginView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/labibliotecamundiallogored">
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/settings"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toTopOf="@+id/loginView"
+        app:layout_constraintBottom_toBottomOf="@id/loginView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/settings_g">
+    </ImageView>
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/loginView"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp"
+        android:text="Admin Dashboard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAlignment="textStart"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/rufina"
+        android:textColor="#333"
+        android:textSize="24dp"
+        android:textStyle="bold">
+    </TextView>
+
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#f0f0f0"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:layout_marginTop="25dp"
+        android:drawableEnd="@drawable/ic_search_black"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Search"
+        android:textSize="16dp"
+        android:inputType="textCapSentences"
+        android:fontFamily="@font/rufina"
+        android:textColor="#333"
+        android:textColorHint="#555"
+        android:padding="10dp">
+    </EditText>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categories"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="17.5dp"
+        android:layout_marginRight="17.5dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintTop_toBottomOf="@id/searchBar"
+        app:layout_constraintBottom_toTopOf="@id/footer"
+        android:layout_above="@+id/footer"
+        tools:listitem="@layout/category_row"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        android:layout_marginBottom="30dp">
+
+        <TextView
+            android:id="@+id/addCategory"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="Add Category"
+            android:clickable="true"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/button_biblioteca"
+            android:fontFamily="@font/rufina"
+            android:textColor="#f5f5f5"
+            android:textSize="14dp">
+        </TextView>
+        <TextView
+            android:id="@+id/addBook"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="Add Book"
+            android:clickable="true"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/button_biblioteca"
+            android:fontFamily="@font/rufina"
+            android:textColor="#f5f5f5"
+            android:textSize="14dp">
+        </TextView>
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

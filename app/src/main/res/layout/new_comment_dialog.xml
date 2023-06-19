@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/shape_rectangle"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:drawableStart="@drawable/ic_arrow_back_ios"
+        android:layout_marginLeft="5dp"
+        android:fontFamily="@font/rufina"
+        android:textColor="#3c646e"
+        android:textSize="14dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/rufina"
+        android:gravity="center"
+        android:text="Add Recommendation"
+        android:textColor="#333"
+        android:textSize="16dp"
+        android:textStyle="bold"></TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialogTitle"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/rufina"
+        android:hint="Write your recommendation"
+        android:textColorHint="#555"
+        android:textColor="#333"
+        android:textSize="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/commentPart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rufina"
+            android:background="#d5d5d5"
+            android:backgroundTint="#00000000"
+            android:textColorHint="#3c646e"
+            android:inputType="textMultiLine|textCapSentences"
+            android:textColor="#3c646e"
+            android:textSize="16dp"></com.google.android.material.textfield.TextInputEditText>
+
+        <TextView
+            android:id="@+id/submitComment"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/dialogTitle"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_biblioteca"
+            android:fontFamily="@font/rufina"
+            android:gravity="center"
+            android:text="Submit"
+            android:textStyle="bold"
+            android:textColor="#d5d5d5"
+            android:textSize="14dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</RelativeLayout>

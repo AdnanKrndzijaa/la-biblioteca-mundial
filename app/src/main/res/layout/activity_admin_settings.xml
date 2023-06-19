@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d9d9d9"
+    tools:context=".AdminSettings">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="0dp"
+        android:layout_height="90dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/loginView"
+        android:background="@drawable/login_shape">
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Back"
+        android:drawableStart="@drawable/ic_arrow_back_ios"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="@id/loginView"
+        app:layout_constraintBottom_toBottomOf="@id/loginView"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:fontFamily="@font/rufina"
+        android:textColor="#3c646e"
+        android:textSize="14dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/loginView"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp"
+        android:text="Settings"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAlignment="textStart"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:fontFamily="@font/rufina"
+        android:textColor="#333"
+        android:textSize="28dp"
+        android:textStyle="bold">
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:background="@drawable/button_white_gray">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profilePicture"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:background="#f5f5f5"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/account_white"
+            app:shapeAppearanceOverlay="@style/styleRoundedCornersImageSe"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="17dp"
+                android:paddingBottom="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="Name Surname"
+                android:layout_marginLeft="6dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:fontFamily="@font/rufina"/>
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:paddingLeft="15dp"
+                android:paddingBottom="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="Email"
+                android:layout_marginLeft="6dp"
+                android:textSize="14sp"
+                android:textColor="#555"
+                android:fontFamily="@font/rufina"/>
+
+            <TextView
+                android:id="@+id/joined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:paddingLeft="15dp"
+                android:paddingBottom="15dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="Joined"
+                android:layout_marginLeft="6dp"
+                android:textSize="10sp"
+                android:textColor="#555"
+                android:fontFamily="@font/rufina"/>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/privacyPolicy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/profile"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Privacy Policy"
+        android:layout_marginLeft="6dp"
+        android:textSize="14sp"
+        android:textColor="#333"
+        android:fontFamily="@font/rufina"/>
+
+    <TextView
+        android:id="@+id/vulerability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/privacyPolicy"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Report a vulerability"
+        android:layout_marginLeft="6dp"
+        android:textSize="14sp"
+        android:textColor="#333"
+        android:fontFamily="@font/rufina"/>
+
+    <TextView
+        android:id="@+id/dataPrivacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/vulerability"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Data Privacy"
+        android:layout_marginLeft="6dp"
+        android:textSize="14sp"
+        android:textColor="#333"
+        android:fontFamily="@font/rufina"/>
+
+    <TextView
+        android:id="@+id/website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/dataPrivacy"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Visit LBM website"
+        android:layout_marginLeft="6dp"
+        android:textSize="14sp"
+        android:textColor="#333"
+        android:fontFamily="@font/rufina"/>
+
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/website"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="30dp"
+        android:text="Currently logged in "
+        android:layout_marginLeft="6dp"
+        android:textSize="11sp"
+        android:textStyle="italic"
+        android:textColor="#555"
+        android:fontFamily="@font/rufina"/>
+
+    <TextView
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/text1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Sign out"
+        android:layout_marginLeft="6dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#333"
+        android:fontFamily="@font/rufina"/>
+
+
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toTopOf="@+id/loginView"
+        app:layout_constraintBottom_toBottomOf="@id/loginView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/labibliotecamundiallogored">
+    </ImageView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

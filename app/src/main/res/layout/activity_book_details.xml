@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d9d9d9"
+    tools:context=".adminpannel.books.BookDetails">
+
+    <TextView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="35dp"
+        android:text="Back"
+        android:gravity="center_vertical"
+        android:drawableStart="@drawable/ic_arrow_back_ios"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:fontFamily="@font/rufina"
+        android:textColor="#333"
+        android:textSize="14dp">
+    </TextView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="45dp"
+        android:layout_height="220dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintTop_toBottomOf="@id/back"
+        android:id="@+id/loginView"
+        android:background="@drawable/button_white_gray">
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/mainHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/loginView"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="-30dp"
+        android:layout_marginRight="30dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="50dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/singleBookTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Book Title"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#333"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/rufina"/>
+
+                <TextView
+                    android:id="@+id/singleBookAuthor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Book Author"
+                    android:textColor="#333"
+                    android:textSize="12dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/rufina"/>
+
+                <TextView
+                    android:id="@+id/singleBookCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/button_red"
+                    android:textColor="#f5f5f5"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginTop="25dp"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/rufina"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@id/image"
+                    android:layout_width="130dp"
+                    android:layout_height="190dp"
+                    android:layout_marginEnd="5dp"
+                    android:orientation="horizontal">
+
+                    <com.github.barteksc.pdfviewer.PDFView
+                        android:id="@+id/imageCategoryBooks"
+                        android:layout_width="match_parent"
+                        android:background="#00000000"
+                        android:layout_height="match_parent"/>
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="30dp"
+                        android:indeterminateDrawable="@drawable/custom_progress_bar_white" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/otherInfo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/mainHeader"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:gravity="center"
+                    android:textColor="#555"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/rufina"/>
+                <TextView
+                    android:id="@+id/singleBookDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:gravity="center"
+                    android:textColor="#555"
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/rufina"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/sizee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Size"
+                    android:gravity="center"
+                    android:textColor="#555"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/rufina"/>
+                <TextView
+                    android:id="@+id/singleBookSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:gravity="center"
+                    android:textColor="#555"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/rufina"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Views"
+                    android:textColor="#555"
+                    android:textSize="12dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/rufina"/>
+                <TextView
+                    android:id="@+id/singleBookViews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:gravity="center"
+                    android:textColor="#555"
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/rufina"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Downloads"
+                    android:textColor="#555"
+                    android:textSize="12dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/rufina"/>
+                <TextView
+                    android:id="@+id/singleBookDownloads"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:gravity="center"
+                    android:textColor="#555"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/rufina"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/pagess"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pages"
+                    android:textColor="#555"
+                    android:textSize="12dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/rufina"/>
+                <TextView
+                    android:id="@+id/singleBookPages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:gravity="center"
+                    android:textColor="#555"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/rufina"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/otherInfo"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/singleBookDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Book Description"
+                android:fontFamily="@font/rufina"
+                android:textSize="14dp"
+                android:textColor="#333"
+                android:textStyle="italic"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"/>
+
+            <TextView
+                android:id="@+id/recommendationTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recommendations"
+                android:fontFamily="@font/rufina"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="#333"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#333"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recommendationRecycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                tools:listitem="@layout/row_recommendation"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                ></androidx.recyclerview.widget.RecyclerView>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/readBook"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Read"
+            android:background="@drawable/button_gray"
+            android:fontFamily="@font/rufina"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="8dp"
+            android:textColor="#f5f5f5"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:id="@+id/downloadBook"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Download"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/button_gray"
+            android:fontFamily="@font/rufina"
+            android:gravity="center"
+            android:textColor="#f5f5f5"
+            android:textSize="14dp"/>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:background="@drawable/button_gray"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/addComment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/ic_baseline_chat_white"
+                android:gravity="center" />
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

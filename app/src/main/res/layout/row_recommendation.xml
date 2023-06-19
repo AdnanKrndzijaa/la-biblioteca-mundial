@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="5dp">
+
+    <RelativeLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/accountImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/account_g"
+            app:shapeAppearanceOverlay="@style/styleCircleImage"></com.google.android.material.imageview.ShapeableImageView>
+
+        <TextView
+            android:id="@+id/accountName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toStartOf="@id/recommendationDate"
+            android:layout_toEndOf="@id/accountImage"
+            android:fontFamily="@font/rufina"
+            android:text="Name Surname"
+            android:textColor="#555"
+            android:textSize="16dp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/recommendationDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dd/MM/yyyy"
+            android:layout_alignParentEnd="true"
+            android:textSize="12dp"
+            android:fontFamily="@font/rufina"
+            android:layout_marginRight="10dp"
+            android:textColor="#555"></TextView>
+
+        <TextView
+            android:id="@+id/recommendationContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/accountName"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/accountImage"
+            android:fontFamily="@font/rufina"
+            android:text="Recommendation"
+            android:textColor="#777"
+            android:textSize="12dp"></TextView>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

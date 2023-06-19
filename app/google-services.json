@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "485442013188",
+    "project_id": "the-reading-room-app",
+    "storage_bucket": "the-reading-room-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:485442013188:android:4ab749a80518a038b88d51",
+        "android_client_info": {
+          "package_name": "com.example.thereadingroom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "485442013188-994rdkcjtp87l2gbi9g287ceujv42q28.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD16X7VImH56dCNd00PFerkIExG71tfZ1I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "485442013188-994rdkcjtp87l2gbi9g287ceujv42q28.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".user.BooksUserFragment">
+
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#f0f0f0"
+        android:layout_marginTop="10dp"
+        android:drawableEnd="@drawable/ic_search_black"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Search"
+        android:textSize="16dp"
+        android:inputType="textCapSentences"
+        android:fontFamily="@font/rufina"
+        android:textColor="#1f1f1f"
+        android:textColorHint="#991F1F1F"
+        android:padding="10dp">
+    </EditText>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/books"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="17.5dp"
+        android:layout_marginRight="17.5dp"
+        android:layout_marginBottom="10dp"
+        tools:listitem="@layout/user_row"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+</LinearLayout>
